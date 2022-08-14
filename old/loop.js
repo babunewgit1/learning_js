@@ -39,4 +39,52 @@ function mainLrn (bas, exp) {
    return store;
 }
 
+let res = mainLrn(2,3) + mainLrn(3,3);
+console.log(res);
+
+/*
+   ===> facturial problem solving with loop
+   5! ===> 1 * 2* 3 * 4* 5
+   ## 1! + 2! + 3! + 4! + 5!
+*/
+
+function fact (n) {
+   let factResult = 1;
+   for (let h = 1; h <= n; h ++) {
+      factResult = factResult * h;
+   }
+   return factResult;
+}
+
+let mainstr = 0;
+for (let j = 1; j<= 5; j ++) {
+   mainstr = mainstr + fact(j);
+}
+console.log(mainstr);
+
+
+/*
+   ===> pyramid problem solving with loop
+   *
+   **
+   ***
+   ****
+   *****
+*/
+
+function pyramid (n) {
+   for (let p = 1; p<=n; p++) {
+      let star = ""
+      for (let m = 1; m<=p; m++) {
+         star = star + '* '
+      }
+
+      console.log(star);
+   }
+}
+
+pyramid (10)
+
+
+
 
