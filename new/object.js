@@ -131,12 +131,12 @@ for (let number in sellry) {
 console.log(sumOne);
 
 // way 2
-let sumTwo = 0;
-let objVal = Object.values(sellry);
-for (let result of objVal) {
-   sumTwo += result;
+let sumResult = 0;
+let sumValues = Object.values(sellry);
+for (let sumx of sumValues) {
+   sumResult += sumx;
 }
-console.log(sumTwo);
+console.log(sumResult);
 
 
 
