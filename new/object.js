@@ -89,6 +89,8 @@ const userTwo = {
    hobby : 'learing javascript'
 }
 
+
+
 //travers key and value in object with for in loop;
 for (let key in userTwo) {
    console.log(key);
@@ -137,6 +139,126 @@ for (let sumx of sumValues) {
    sumResult += sumx;
 }
 console.log(sumResult);
+
+
+/*
+   ===> object distactring
+   ===> console all the element of the object and use object distactring
+*/
+
+const man = {
+   name : 'Mahmudul Hasan',
+   age : 24,
+   favBook : {
+      name : "Head First",
+      author : 'HM Nayme'
+   },
+   read : false
+}
+
+// print all element with normal way
+console.log(man);
+console.log(man.name);
+console.log(man.age);
+console.log(man.favBook);
+console.log(man.favBook.name);
+console.log(man.favBook.author);
+console.log(man.read);
+
+
+// print all element with object distactring;
+const {name, age, read, favBook} = man;
+const {name: title, author} = favBook;
+console.log(name);
+console.log(age);
+console.log(read);
+console.log(title);
+console.log(author);
+
+
+/*
+   ===> object coppy
+   ===> copy an object by using 1.manually   2.for in loop  3.Object.assign   4.split operator
+*/
+
+const coppy = {
+   name : 'babu',
+   age : 23,
+}
+
+// 1. manually
+const manually = {
+
+}
+manually.name = coppy.name;
+manually.age = coppy.age;
+console.log(manually);
+
+
+// 2.for in loop
+const first = {
+   name : 'babu',
+   age : 33,
+}
+
+const second = {};
+
+for (let ckey in first) {
+   console.log(ckey, first[ckey]);
+   second[ckey] = first[ckey]
+}
+console.log(second);
+
+// 3.Objct.assign ()
+
+const a = {
+   name : 'babu',
+   age : 35,
+}
+const b = Object.assign({}, a);
+console.log(b);
+
+// 4.split operator
+const coppyed = {...a};
+console.log(coppyed)
+
+
+/*
+   ===> Math object
+   ===> PI, random, round, ceil, flore, max, min
+*/
+
+console.log(Math.PI);
+console.log (Math.random());
+console.log(Math.round(1.6));
+console.log(Math.ceil(1.1));
+console.log(Math.floor(1.9));
+console.log(Math.max(1, 2, 3, 1));
+console.log(Math.min(1, 2, 3, 1));
+
+
+/*
+   ===> talk about json
+   ===> convert an object into a json
+   ===> convert an json into a object
+*/
+
+const json = {
+   name : 'labib',
+   age : 22,
+   read : function () {
+      console.log(`love`)
+   }
+}
+
+const cjson = JSON.stringify(json);
+console.log(cjson);
+
+const cobje = JSON.parse(cjson);
+console.log(cobje);
+
+
+
 
 
 
