@@ -27,6 +27,15 @@
    ===> concat an array with spread operator.
    ===> convert a array with join method.
    ===> split a string.
+   ===> Return an array with multiply by two.
+   ===> print all doctor's name for object of array.
+   ===> print odd number with filter method.
+   ===> print sum of arry with reduct method.
+   ===> print the fighter name;
+   ===> print the fighter who's skill is >= 80.
+   ===> print the sum of fighter's skill.
+   ===> # problem 1: odd sum;
+   ===> # problem 2: even and maxvalue;
 */
 
 // Write an array
@@ -245,6 +254,143 @@ const split = message.split(' ');
 console.log(split); // this will print a array;
 const arrTojoin = split.join('-');
 console.log(arrTojoin);
+
+
+// Return an array with multiply by two.
+const marr = [2,4,6];
+const nmarr = [];
+
+const mresult = marr.map(num => {
+   return nmarr.push(num * 2);
+});
+console.log(nmarr)
+
+
+// print all doctor's name for object of array.
+const nobj = [
+   {
+      name : 'Mahmudul',
+      age : 22,
+   },
+
+   {
+      name : 'babu',
+      age : 15,
+   },
+]
+
+const nresult = nobj.map(num => {
+   return num.name;
+});
+console.log(nresult);
+
+
+// print odd number with filter method.
+const fil = [1,2,3,4,5,6,7,8,9,0]
+const filOpera = fil.filter(num => {
+   return num % 2 === 1;
+});
+console.log(filOpera);
+
+// print sum of arry with reduct method.
+const rearr = [1,2,3,4,5,6,7,8,9];
+
+const result = rearr.reduce((sum, num) => {
+   return sum += num;
+}, 0);
+console.log(result);
+
+
+// print the fighter name;
+const fighter = [
+   {name: 'babu', skill : 70},
+   {name: 'shipa', skill : 80},
+   {name: 'rifat', skill : 90},
+]
+
+const fighterName = fighter.map((num) => {
+   return num.name;
+});
+
+console.log(fighterName);
+
+// print the fighter who's skill is >= 80.
+const skillPower = fighter.filter((number) => {
+   return number.skill >= 80;
+});
+
+console.log(skillPower);
+
+// print the sum of fighter's skill.
+const sumSkill = fighter.reduce((jog, num) => {
+   return jog = jog + num.skill;
+}, 0);
+console.log(sumSkill);
+
+
+// # solution 1: odd sum;
+const oddArray = [1,2,3,4,5,6,7,8,9] 
+
+
+
+const oddResult = oddArray.filter((num) => {
+   return num % 2 === 1;
+});
+
+const arrRed = oddArray.reduce((sum, num) => {
+   return sum += num;
+}, 0);
+console.log(arrRed);
+
+
+// # problem 2: even and maxvalue;
+const mValue = [1,2,3,4,5,6,7,8,9]
+
+// way one
+let int = -1;
+for (let key of mValue) {
+   if (key % 2 === 0) {
+      if (key > int) {
+         int = key
+      }
+   }
+}
+console.log(int);
+
+// way two
+const evn = mValue.filter ((num) => {
+   return num % 2 === 0
+});
+console.log(Math.max(...evn));
+
+
+
+// solve 3;
+const book = [
+   {name: 'book1', price: 450, rating: 4.2},
+   {name: 'book2', price: 470, rating: 4.1},
+   {name: 'book3', price: 350, rating: 3.2},
+   {name: 'book4', price: 600, rating: 4.5},
+]
+
+// take all books with price less than 500 and rating gratter than 4
+const one = book.filter ((num) => {
+   return num.price < 500 && num.rating > 4
+});
+console.log(one);
+
+// sort them by their rating in desending order
+const two = one.sort((x, y) => {
+   return x.rating - y.rating;
+})
+console.log(two);
+
+// print their name.
+const three = one.sort((x, y) => {
+   return x.rating - y.rating;
+}).reverse();
+console.log(three);
+
 
 
 
