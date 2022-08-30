@@ -218,7 +218,7 @@ console.log(marge);
 
 // slice an array.
 const slice = [1,2,3,4,5];
-const sliced = slice.slice(0,4);
+const sliced = slice.slice(1,3);
 console.log(sliced);
 
 
@@ -390,6 +390,8 @@ const three = one.sort((x, y) => {
    return x.rating - y.rating;
 }).reverse();
 console.log(three);
+
+
 
 
 
