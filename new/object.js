@@ -262,3 +262,13 @@ console.log(cobje);
 
 
 
+
+
+
+
+
+
+
+
+
+
